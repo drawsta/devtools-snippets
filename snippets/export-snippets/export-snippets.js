@@ -1,5 +1,4 @@
 // export-snippets.js
-// import-snippets.js
 // 1. Open a DevTools of the DevTools
 //    Press Ctrl+Shift+i to open a DevTools pane, then undock it into separate window
 //    On the opened DevTools pane, press Ctrl+Shift+i again to open a DevTools of the DevTools.
