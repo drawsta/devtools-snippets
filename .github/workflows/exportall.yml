@@ -1,0 +1,29 @@
+name: Update snippets.json
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "snippets/**/*.js"
+
+jobs:
+  exportall:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Update snippets.json
+        run: |
+          bash exportall.sh
+
+      - name: Config git
+        run: git config --global user.name "drawsta" && git config --global user.email "39547711+drawsta@users.noreply.github.com"
+
+      - name: Stage and commit
+        run: git commit -am "🤖 Update snippets.json"
+      - name: Push code to master
+        run: git push origin master
