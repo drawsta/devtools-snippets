@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/bash
 
 filepaths=($(find . -name '*.js' | sort -n))
 for filepath in ${filepaths[@]}
